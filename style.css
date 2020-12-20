@@ -1,0 +1,86 @@
+body {
+    /*background-image: url("https://www.killitonline.com/wp-content/uploads/2017/03/artificial-intelligence-ai-brain-machine-learning-ss-1920.jpg");*/
+    background: url("https://content.presspage.com/uploads/2110/1920_gettyimages-1043917898-133920.jpg?10000") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#title {
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    color: ghostwhite;
+}
+
+/* Grid for 3x3 */
+.grid {
+    display: grid;
+    grid-template-columns: 150px 150px 150px;
+    grid-template-rows: 150px 150px 150px;
+    grid-column-gap: 25px;
+    grid-row-gap: 25px;
+    justify-content: center;
+}
+
+/* Flip section */
+.cell {
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    perspective: 1000px;
+}
+
+.inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+
+}
+
+.cell:hover .inner {
+    transform:rotateY(180deg);
+}
+
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border: 5px solid;
+    border-radius: 5%;
+}
+
+.front {
+    background-color: lightblue;
+    border-color: lightblue;
+    font-weight: 50;
+}
+
+.back {
+    background-color: lightgreen;
+    border-color: lightgreen;
+    transform: rotateY(180deg);
+}
+
+p {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.2em;
+    text-align: center;
+    color: black;
+}
+
+.front p {
+    padding: 40px 0 0 0;
+}
+
+.back p {
+    padding: 25px 5px 0 5px;
+
+}
+
+footer {
+    visibility: hidden;
+}
